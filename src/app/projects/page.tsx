@@ -172,10 +172,10 @@ export default function ProjectsKanbanPage() {
                             {COLUMNS.map(col => {
                                 const colProjects = filteredProjects.filter(p => p.status === col.id);
                                 return (
-                                    <div key={col.id} className="flex-1 flex flex-col bg-gray-900/30 rounded-xl border border-gray-800 min-w-[280px] backdrop-blur-sm">
-                                        <div className={`p-4 border-b border-gray-800 border-t-4 ${col.color} rounded-t-xl bg-gray-900`}>
+                                    <div key={col.id} className="flex-1 flex flex-col bg-white dark:bg-gray-900/30 rounded-xl border border-gray-200 dark:border-gray-800 min-w-[280px] shadow-sm dark:shadow-none">
+                                        <div className={`p-4 border-b border-gray-200 dark:border-gray-800 border-t-4 ${col.color} rounded-t-xl bg-gray-50 dark:bg-gray-900`}>
                                             <div className="flex justify-between items-center">
-                                                <h3 className="font-bold text-white text-lg">{col.title}</h3>
+                                                <h3 className="font-bold text-gray-900 dark:text-white text-lg">{col.title}</h3>
                                                 <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full text-white ${col.bg}`}>
                                                     {colProjects.length}
                                                 </span>

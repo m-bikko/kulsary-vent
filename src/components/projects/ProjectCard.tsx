@@ -26,7 +26,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onDele
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     onClick={handleClick}
-                    className={`bg-gray-900 border border-gray-800 rounded-xl p-4 mb-3 cursor-pointer group hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 transition-all ${snapshot.isDragging ? 'rotate-2 shadow-2xl scale-105 z-50 ring-2 ring-blue-500' : ''
+                    className={`bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4 mb-3 cursor-pointer group hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 transition-all shadow-sm dark:shadow-none ${snapshot.isDragging ? 'shadow-2xl z-50 ring-2 ring-blue-500' : ''
                         }`}
                 >
                     <div className="flex justify-between items-start mb-2">
