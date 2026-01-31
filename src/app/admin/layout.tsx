@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function AdminLayout({
     children,
@@ -10,7 +11,14 @@ export default function AdminLayout({
         <div className="min-h-screen bg-black text-gray-100 flex font-sans antialiased">
             {/* Sidebar */}
             <aside className="w-64 bg-gray-900 border-r border-gray-800 hidden md:flex flex-col">
-                <div className="p-6 border-b border-gray-800">
+                <div className="p-6 border-b border-gray-800 flex items-center gap-3">
+                    <Image
+                        src="/white logo.svg"
+                        alt="Kulsary Admin Logo"
+                        width={32}
+                        height={32}
+                        className="w-8 h-8"
+                    />
                     <h1 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                         Kulsary Admin
                     </h1>

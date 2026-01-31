@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Plus, Edit2, Trash2, Package } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
+import LoadingScreen from '@/components/ui/LoadingScreen';
 
 export default function ProductsPage() {
     const [templates, setTemplates] = useState<any[]>([]);
@@ -53,7 +54,9 @@ export default function ProductsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {isLoading ? (
-                    <div className="text-white col-span-full text-center py-20">Загрузка...</div>
+                    <div className="col-span-full">
+                        <LoadingScreen fullScreen={false} />
+                    </div>
                 ) : templates.length === 0 ? (
                     <div className="col-span-full">
                         <Card className="text-center py-20 border-dashed border-gray-700 bg-transparent">

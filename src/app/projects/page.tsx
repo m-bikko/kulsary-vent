@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/Input';
 import { Modal } from '@/components/ui/Modal';
 import { AnalyticsDashboard } from '@/components/leads/AnalyticsDashboard';
 import { ProjectCard } from '@/components/projects/ProjectCard';
+import LoadingScreen from '@/components/ui/LoadingScreen';
 
 const COLUMNS = [
     { id: 'new', title: 'Новые', color: 'border-blue-500', bg: 'bg-blue-500' },
@@ -164,7 +165,9 @@ export default function ProjectsKanbanPage() {
             <AnalyticsDashboard leads={filteredProjects} />
 
             {isLoading ? (
-                <div className="text-center py-20 text-gray-500">Загрузка доски...</div>
+                <div className="flex-1 flex flex-col min-h-[400px]">
+                    <LoadingScreen fullScreen={false} />
+                </div>
             ) : (
                 <div className="flex-1 overflow-x-auto overflow-y-hidden pb-4">
                     <DragDropContext onDragEnd={handleDragEnd}>

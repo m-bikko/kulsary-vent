@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Plus, Trash2, Edit2, Package } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
+import LoadingScreen from '@/components/ui/LoadingScreen';
 import { Input } from '@/components/ui/Input';
 import { Modal } from '@/components/ui/Modal';
 import { IMaterial } from '@/models/Material'; // Type only
@@ -81,7 +82,7 @@ export default function MaterialsPage() {
 
             <div className="grid grid-cols-1 gap-6">
                 {isLoading ? (
-                    <div className="text-white text-center py-20">Загрузка...</div>
+                    <LoadingScreen fullScreen={false} />
                 ) : materials.length === 0 ? (
                     <Card className="text-center py-20 border-dashed border-gray-700 bg-transparent">
                         <Package className="h-16 w-16 text-gray-600 mx-auto mb-4" />

@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Settings, FolderKanban } from 'lucide-react';
+import Image from 'next/image';
+import { Settings } from 'lucide-react';
 
 export default function Navbar() {
     return (
@@ -8,12 +9,13 @@ export default function Navbar() {
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center">
                         <Link href="/projects" className="flex items-center space-x-2">
-                            <div className="bg-gradient-to-r from-blue-500 to-cyan-500 p-2 rounded-lg">
-                                <FolderKanban className="h-6 w-6 text-white" />
-                            </div>
-                            <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                                Kulsary Vent
-                            </span>
+                            <Image 
+                                src="/white logo.svg" 
+                                alt="Kulsary Vent Logo" 
+                                width={32} 
+                                height={32} 
+                                className="w-20 h-20"
+                            />
                         </Link>
                         <div className="hidden md:block ml-10">
                             <div className="flex items-baseline space-x-4">
